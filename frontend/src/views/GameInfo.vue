@@ -3,11 +3,28 @@
 		<h2>{{ gameTitle }} {{ $route.params.id }}</h2>
 
 		<v-card>
-			{{ rating }}
+			
 			<v-img width="200" :src="image"></v-img>
 			<router-link :to="{ name: 'info', params: { id: '2' }}">To another game</router-link>
 	<!-- Title -->
 	<!-- Ratings -->
+	<v-divider> </v-divider>
+		<v-card-actions class="pa-3"> 
+			 Rate {{ gameTitle }}
+			<v-spacer></v-spacer>
+			<span class="pr-2">
+				{{ rating }}
+			</span>
+			<v-rating
+				v-model="rating"
+				background-color="#8A8D8F"
+				color="#00263A"
+				half-increments
+				dense
+				hover
+				size="18"
+			></v-rating> 
+		</v-card-actions>
 	<!-- Overview: Image -->
 	<!-- Download game -->
 		</v-card>
