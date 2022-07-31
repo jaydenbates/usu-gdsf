@@ -45,6 +45,9 @@ export default {
 
     data: () => ({
         rating: 3,
+        return: {
+            rating
+        }
     }),
 }
 </script>
